@@ -1,0 +1,54 @@
+<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Grid Wall Creator"
+    Width="440"
+    Height="500"
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="NoResize"
+    Background="#252525">
+
+    <Border Margin="14" Padding="18" Background="#303030" CornerRadius="8" BorderBrush="#444444" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="Grid Wall Creator" FontSize="21" FontWeight="SemiBold" Foreground="White" Margin="0,0,0,4"/>
+                <TextBlock Text="Create walls from selected grid lines" FontSize="12" Foreground="#B8B8B8" Margin="0,0,0,16"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Wall mode" Foreground="#D0D0D0" FontSize="12"/>
+                <ComboBox x:Name="combo_mode" Height="30" Margin="0,4,0,12" SelectedIndex="0">
+                    <ComboBoxItem Content="Exterior walls"/>
+                    <ComboBoxItem Content="Interior walls"/>
+                </ComboBox>
+
+                <TextBlock Text="Side A distance, mm" Foreground="#D0D0D0" FontSize="12"/>
+                <TextBox x:Name="txt_side_a" Text="310" Height="30" Margin="0,4,0,10"/>
+
+                <TextBlock Text="Side B distance, mm" Foreground="#D0D0D0" FontSize="12"/>
+                <TextBox x:Name="txt_side_b" Text="200" Height="30" Margin="0,4,0,10"/>
+
+                <TextBlock Text="Base Offset, mm" Foreground="#D0D0D0" FontSize="12"/>
+                <TextBox x:Name="txt_base_offset" Text="0" Height="30" Margin="0,4,0,10"/>
+
+                <TextBlock Text="Wall Height, mm" Foreground="#D0D0D0" FontSize="12"/>
+                <TextBox x:Name="txt_wall_height" Text="3000" Height="30" Margin="0,4,0,12"/>
+
+                <TextBlock Text="Tip: swap Side A and Side B to move wall to opposite side." Foreground="#8F8F8F" FontSize="11" TextWrapping="Wrap" Margin="0,2,0,8"/>
+
+                <CheckBox x:Name="chk_join" Content="Auto join created walls" IsChecked="True" Foreground="#D0D0D0" Margin="0,4,0,0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,18,0,0">
+                <Button x:Name="btn_cancel" Content="Cancel" Width="90" Height="36" Margin="0,0,8,0" IsCancel="True"/>
+                <Button x:Name="btn_create" Content="Create" Width="105" Height="36" IsDefault="True"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
