@@ -25,15 +25,23 @@ Typical workflow:
 3. Set offsets and height
 4. Create walls automatically
 
-## Interface
+## Interface & Workflow
 
-### Tool Window
+### 1. Select Wall Type
 
-![Grid Wall UI](interface.png)
+![Choose Wall](choose%20a%20wall.png)
 
-### Result Example
+### 2. Specify Settings
 
-![Grid Wall Result](result.png)
+![Specify Settings](specify%20settings.png)
+
+### 3. Exterior Result
+
+![Exterior Result](result%20exterior.png)
+
+### 4. Interior Result
+
+![Interior Result](result%20interior.png)
 
 ## Tech Stack
 
